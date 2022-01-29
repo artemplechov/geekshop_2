@@ -34,13 +34,13 @@ def get_same_products(hot_product):
     return same_products
 
 
-def products(request, pk=None, page=1):
+def products(request, pk=None, page="1"):
     title = "продукты"
     links_menu = ProductCategory.objects.filter(is_active=True)
     basket = get_basket(request.user)
 
     if pk is not None:
-        if pk == 0:
+        if pk == "0":
             category = {"pk": 0, "name": "все"}
             products = Product.objects.filter(is_active=True, category__is_active=True).order_by("price")
         else:
