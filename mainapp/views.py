@@ -34,7 +34,7 @@ def get_same_products(hot_product):
     return same_products
 
 
-def products(request, pk=None, page="1"):
+def products(request, pk=None, page=1):
     title = "продукты"
     links_menu = ProductCategory.objects.filter(is_active=True)
     basket = get_basket(request.user)

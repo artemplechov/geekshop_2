@@ -2,7 +2,7 @@ from django.urls import re_path
 
 import basketapp.views as basketapp
 
-from .apps import BasketappConfig
+from basketapp.apps import BasketappConfig
 
 app_name = BasketappConfig.name
 
