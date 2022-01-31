@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "authnapp",
     "basketapp",
     "adminapp",
+    "social_django",
 ]
 
 # Auth model
@@ -72,8 +73,14 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+<<<<<<< Updated upstream
                 "mainapp.context_processors.basket",
             ]
+=======
+                "social_django.context_processors.backends",
+                "social_django.context_processors.login_redirect",
+            ],
+>>>>>>> Stashed changes
         },
     }
 ]
