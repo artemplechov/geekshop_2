@@ -15,6 +15,7 @@ from django.http import JsonResponse
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 class OrderList(LoginRequiredMixin, ListView):
     model = Order
 

@@ -9,7 +9,6 @@ from authnapp.forms import ShopUserEditForm, ShopUserLoginForm, ShopUserProfileE
 from authnapp.models import ShopUser
 
 
-
 def login(request):
     title = "вход"
 
@@ -60,7 +59,7 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required
-
+@transaction.atomic
 def edit(request):
     title = "редактирование"
 
