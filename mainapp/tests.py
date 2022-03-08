@@ -53,7 +53,7 @@ class ProductsTestCase(TestCase):
 
     def test_product_get_items(self):
         product_1 = Product.objects.get(name="комфорт 1")
-        product_3 = Product.objects.get(name="комфорт 2")
+        product_3 = Product.objects.get(name="комфорт 2") 
 
         products_as_class_method = set(product_1.get_items())
         products = set([product_1, product_3])
